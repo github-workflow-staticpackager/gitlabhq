@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Design management design index page when loaded renders design index 1`] = `
+<div
+  class="design-detail fixed-top gl-bg-gray-10 gl-display-flex gl-flex-direction-column gl-justify-content-center gl-lg-flex-direction-row gl-w-full js-design-detail"
+>
+  <div
+    class="gl-display-flex gl-flex-direction-column gl-flex-grow-1 gl-overflow-hidden gl-relative"
+  >
+    <toolbar-stub
+      __typename="Design"
+      description="Test description"
+      descriptionhtml="Test description"
+      design="[object Object]"
+      diffrefs="[object Object]"
+      discussions="[object Object]"
+      event="NONE"
+      filename="test.jpg"
+      fullpath="full-design-path"
+      id="reference-0"
+      iid="1"
+      image="test.jpg"
+      imagev432x230="test.jpg"
+      islatestversion="true"
+      issidebaropen="true"
+      issue="[object Object]"
+      notescount="0"
+      project-path="project-path"
+      updatedby="[object Object]"
+    />
+    <div
+      class="gl-display-flex gl-flex-direction-column gl-flex-grow-1 gl-lg-flex-direction-row gl-overflow-hidden gl-relative"
+    >
+      <div
+        class="gl-display-flex gl-flex-direction-column gl-flex-grow-2 gl-overflow-hidden gl-relative"
+      >
+        <design-presentation-stub
+          discussions="[object Object],[object Object]"
+          image="test.jpg"
+          imagename="test.jpg"
+          scale="1"
+        />
+        <div
+          class="design-scaler-wrapper gl-absolute gl-align-items-center gl-display-flex gl-justify-content-center gl-mb-6"
+        >
+          <design-scaler-stub
+            maxscale="2"
+          />
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;

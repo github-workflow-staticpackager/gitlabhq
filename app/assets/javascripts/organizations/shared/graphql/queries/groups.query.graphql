@@ -1,0 +1,46 @@
+#import "~/graphql_shared/fragments/page_info.fragment.graphql"
+query getOrganizationGroups(
+  $id: OrganizationsOrganizationID!
+  $search: String
+  $sort: String
+  $first: Int
+  $last: Int
+  $before: String
+  $after: String
+) {
+  organization(id: $id) {
+    id
+    groups(
+      first: $first
+      search: $search
+      sort: $sort
+      last: $last
+      before: $before
+      after: $after
+    ) {
+      nodes {
+        id
+        fullName
+        parent {
+          id
+        }
+        webUrl
+        descriptionHtml
+        avatarUrl
+        descendantGroupsCount
+        projectsCount
+        groupMembersCount
+        visibility
+        userPermissions {
+          removeGroup
+        }
+        maxAccessLevel {
+          integerValue
+        }
+      }
+      pageInfo {
+        ...PageInfo
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# frozen_string_literal: true
+
+rubocop.execute_inline_disable_suggestor
+rubocop.execute_todo_suggestor

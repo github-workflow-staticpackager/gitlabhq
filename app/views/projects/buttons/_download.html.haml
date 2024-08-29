@@ -1,0 +1,12 @@
+- project = local_assigns.fetch(:project)
+- ref = local_assigns.fetch(:ref)
+- css_class = local_assigns.fetch(:css_class, '')
+
+- if !project.empty_repo? && can?(current_user, :download_code, project)
+  .project-action-button.dropdown.gl-dropdown.inline{ class: css_class }>
+    = render Pajamas::ButtonComponent.new(button_options: { class: 'dropdown-toggle gl-dropdown-toggle dropdown-icon-only has-tooltip', title: s_('DownloadSource|Download'), 'data-toggle' => 'dropdown', 'aria-label' => s_('DownloadSource|Download'), 'data-display' => 'static', data: { testid: 'download-source-code-button' } }) do
+      = sprite_icon('download', css_class: 'gl-icon dropdown-icon')
+      %span.sr-only=  _('Select Archive Format')
+      = sprite_icon('chevron-down', css_class: 'gl-icon dropdown-chevron')
+    %ul.dropdown-menu.dropdown-menu-right{ role: 'menu' }
+      = render 'projects/buttons/download_menu_items', project: project, ref: ref
